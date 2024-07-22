@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import NavigationDots from "./NavigationDots";
 import CarouselItemComp from "./CarouselItem";
 import type { IAnswer, ICarouselItem } from "../../types/VerticalCarouselTypes";
-import { AppDispatch, RootState } from "../../store/store";
-import { useDispatch, useSelector } from "react-redux";
-import { addOrUpdateAnswer } from "../../store/slices/answerSlice";
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 import Summary from "../summarySlide/SummarySlide";
 
 interface VerticalCarouselProps {

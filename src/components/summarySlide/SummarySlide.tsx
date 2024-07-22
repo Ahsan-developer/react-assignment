@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { IAnswer } from "../../types/VerticalCarouselTypes";
 import { useSubmitAnswersMutation } from "../../store/api/saveAnswers";
 
 interface SummaryProps {

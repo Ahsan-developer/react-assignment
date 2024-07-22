@@ -26,7 +26,7 @@ const CarouselItem: React.FC<ICarouselItemProps> = ({
           <Option
             key={optionIndex}
             option={option}
-            isSelected={answers[index]?.answer?.label == option.label ?? false}
+            isSelected={answers[index]?.answer?.label === option.label ?? false}
             onClick={() =>
               handleOptionClick({ question: item.title, answer: option })
             }
