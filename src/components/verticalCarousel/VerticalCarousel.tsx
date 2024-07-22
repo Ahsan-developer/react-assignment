@@ -10,14 +10,15 @@ interface VerticalCarouselProps {
   items: ICarouselItem[];
   handleOptionClick: (option: IAnswer) => void;
   currentIndex: number;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
   items,
   handleOptionClick,
   currentIndex,
+  setCurrentIndex,
 }) => {
-  // const [currentIndex, setCurrentIndex] = useState(0);
   const answers = useSelector((state: RootState) => state.answers.answers);
 
   const handleClick = (option: IAnswer) => {
@@ -28,7 +29,7 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
   };
 
   const scrollToItem = (index: number) => {
-    // setCurrentIndex(index);
+    setCurrentIndex(index);
     const element = document.getElementById(`item-${index}`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -54,7 +55,7 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
             />
           ))
         ) : (
-          <Summary title="Summary" />
+          <Summary title="Summary Of Attempt Questions" />
         )}
       </div>
     </div>

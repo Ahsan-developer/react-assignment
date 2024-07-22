@@ -26,6 +26,7 @@ const MultiStepPoll: React.FC = () => {
       items={steps}
       handleOptionClick={handleOptionClick}
       currentIndex={currentIndex}
+      setCurrentIndex={setCurrentIndex}
     />
   );
 };

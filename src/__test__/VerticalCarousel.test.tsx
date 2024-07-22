@@ -32,6 +32,7 @@ describe("VerticalCarousel", () => {
           items={items}
           handleOptionClick={handleOptionClick}
           currentIndex={currentIndex}
+          setCurrentIndex={() => {}}
         />
       </Provider>
     );
@@ -48,6 +49,7 @@ describe("VerticalCarousel", () => {
           items={items}
           handleOptionClick={handleOptionClick}
           currentIndex={items.length}
+          setCurrentIndex={() => {}}
         />
       </Provider>
     );
