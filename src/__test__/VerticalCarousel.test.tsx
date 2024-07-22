@@ -54,6 +54,8 @@ describe("VerticalCarousel", () => {
       </Provider>
     );
 
-    expect(screen.getByText("Summary")).toBeInTheDocument();
+    expect(
+      screen.getByText("Summary Of Attempt Questions")
+    ).toBeInTheDocument();
   });
 });
