@@ -1,12 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
+import MultiStepPoll from "./components/multiStepPoll/MultiStepPoll";
 
 function App() {
   return (
-    <div className="App">
-      <h1>React Assignment</h1>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <MultiStepPoll />
+      </div>
+    </Provider>
   );
 }
 

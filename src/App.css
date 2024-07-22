@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.transform {
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.translate-x-0 {
+  transform: translateX(0);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
